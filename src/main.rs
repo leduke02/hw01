@@ -70,3 +70,7 @@ fn hunt_food(roll: u64) -> u64 {
         40
     }
 }
+// Returns true if gold is at least cost
+fn can_afford(gold: u64, cost: u64) -> bool {
+    gold >= cost
+}

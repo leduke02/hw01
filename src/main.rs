@@ -58,3 +58,15 @@ fn roll_many(seed: u64, count: u64) -> u64 {
     }
     sum
 }
+// Returns the food gained for a hunting roll
+fn hunt_food(roll: u64) -> u64 {
+    if roll == 1 {
+        0
+    } else if roll <= 3 {
+        10
+    } else if roll <= 5 {
+        20
+    } else {
+        40
+    }
+}

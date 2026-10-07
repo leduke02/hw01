@@ -50,3 +50,11 @@ fn roll_die(seed: u64) -> u64 {
     let mut rng = StdRng::seed_from_u64(seed);
     rng.random_range(1..=6)
 }
+// Rolls count dice using seeds seed, seed + 1, ... and returns the sum
+fn roll_many(seed: u64, count: u64) -> u64 {
+    let mut sum = 0;
+    for i in 0..count {
+        sum += roll_die(seed + i);
+    }
+    sum
+}

@@ -17,3 +17,17 @@ fn print_menu() {
     println!("4. View status");
     println!("5. Quit");
 }
+// Keeps asking until the user types a whole number from min to max
+fn read_number(min: u64, max: u64) -> u64 {
+    loop {
+        print!("Enter a number from {} to {}: ", min, max);
+        io::stdout().flush().unwrap();
+
+        let mut input = String::new();
+        let bytes = io::stdin().read_line(&mut input).unwrap();
+        if bytes == 0 {
+            // input was closed, so stop instead of asking forever
+            std::process::exit(0);
+        }
+	}
+}

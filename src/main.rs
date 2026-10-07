@@ -74,3 +74,7 @@ fn hunt_food(roll: u64) -> u64 {
 fn can_afford(gold: u64, cost: u64) -> bool {
     gold >= cost
 }
+// Prints gold, food, and day
+fn print_status(gold: u64, food: u64, day: u64) {
+    println!("Day: {} | Gold: {} | Food: {}", day, gold, food);
+}
